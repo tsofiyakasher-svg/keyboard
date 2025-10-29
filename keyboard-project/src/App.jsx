@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import HebButtons from './components/keyboard.jsx'
+import { useState } from "react";
+import "./App.css";
+import HebButtons from "./components/keyboard.jsx";
 
 function App() {
-
   return (
-    <HebButtons/>
-   
-  )
+    <div>
+      <HebButtons />
+    </div>
+  );
 }
 
-export default App
+export default App;

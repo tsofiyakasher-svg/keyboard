@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 
 function TypeHebrew() {
+  const [fontSize, setFontSize] = useState("20px");
+  function Increasefontsize() {
+    setFontSize("50px");
+  }
+
   const [letters, setLetters] = useState("");
 
   const HebButtons = (event) => {
     const buttonText = event.target.innerText;
     console.log(buttonText);
-    // setLetters(buttonText);
     setLetters((prev) => prev + buttonText);
-    //setState((prev)=>prev + 1})
   };
 
   console.log(letters);
 
   return (
     <div>
+      <div style={{ fontSize: fontSize }}>{letters}</div>{" "}
       <div>
-        {letters}
         <button onClick={HebButtons}>ק</button>
         <button onClick={HebButtons}>ר</button>
         <button onClick={HebButtons}>א</button>
@@ -51,16 +54,23 @@ function TypeHebrew() {
         <button onClick={HebButtons}>ץ</button>
       </div>
       <div>
+        <button onClick={HebButtons}>0</button>
+        <button onClick={HebButtons}>1</button>
+        <button onClick={HebButtons}>2</button>
+        <button onClick={HebButtons}>3</button>
+        <button onClick={HebButtons}>4</button>
+        <button onClick={HebButtons}>5</button>
+        <button onClick={HebButtons}>6</button>
+        <button onClick={HebButtons}>7</button>
+        <button onClick={HebButtons}>8</button>
+        <button onClick={HebButtons}>9</button>
+      </div>
+      <div>
         <button onClick={HebButtons}> </button>
       </div>
+      <button onClick={Increasefontsize}>הגדל גודל גופן </button>
     </div>
   );
-  //   function Save(setLetters) {
-  //     const savedLetters = { setLetters };
-  //     return console.log(savedLetters);
-  //   }
 }
-
-// createRoot(document.)
 
 export default TypeHebrew;
