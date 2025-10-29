@@ -6,7 +6,9 @@ function TypeHebrew() {
   const HebButtons = (event) => {
     const buttonText = event.target.innerText;
     console.log(buttonText);
-    setLetters(buttonText);
+    // setLetters(buttonText);
+    setLetters((prev) => prev + buttonText);
+    //setState((prev)=>prev + 1})
   };
 
   console.log(letters);
